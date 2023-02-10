@@ -14,8 +14,6 @@ class ArticlesController < ApplicationController
     else
       render :index
     end
-
-
   end
 
   def show
