@@ -9,6 +9,11 @@ class ArticlesController < ApplicationController
       @articles = Article.all
     end
     
+    if turbo_frame_request?
+      render 'index', locals: { articles: @articles }
+    else
+      render :index
+    end
 
 
   end
